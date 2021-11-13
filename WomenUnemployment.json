@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Women's Unemployment",
-    "subtitle": "Trends in unemployment rates across different countries",
+    "subtitle": "Foreign women are at a disadvantage in the labour market",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "middle",
