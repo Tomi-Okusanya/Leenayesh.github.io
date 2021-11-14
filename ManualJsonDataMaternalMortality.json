@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Maternal deaths in European and Latin American countries taken from 2019",
+  "title": {
+    "text": "Maternal deaths per 100,000 live births (2019)",
+    "subtitle": "Data from Latin America and Europe",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 200,
+  "width": 700,
+  "data": {
+    "values": [
+      {"a": "Chile", "b": "10.9"},
+      {"a": "Finland", "b": "10.9"},
+      {"a": "Germany", "b": "3.2"},
+      {"a": "Colombia", "b": "50.7"},
+      {"a": "Netherlands", "b": "5.3"},
+      {"a": "Norway", "b": "0"},
+      {"a": "Costa Rica", "b": "20.2"},
+      {"a": "Lithuania", "b": "11"},
+      {"a": "Sweden", "b": "5.2"},
+      {"a": "Mexico", "b": "34.2"},
+      {"a": "Austria", "b": "5.9"},
+      {"a": "Estonia", "b": "0"},
+      {"a": "Hungary", "b": "11.2"}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "a",
+      "title": "Country",
+      "type": "nominal",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {"field": "b", "title": "Maternal Deaths", "type": "quantitative"}
+  },
+  "config": {}
+}
