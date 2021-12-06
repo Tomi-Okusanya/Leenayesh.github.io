@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Supermarket Chains",
+  "title": {
+    "text": "The 10 most popular supermarket chains",
+    "subtitle": "Percentage of people who have a positive opinion of supermarket chain. Source:YouGov.",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/my_data_scraping_1_.csv"
+  },
+  "mark": {"type": "bar", "color": "#86d0bb", "strokeWidth": 2, "opacity": 1},
+  "height": 300,
+  "width": 250,
+  "encoding": {
+    "y": {"field": "Supermarket", "type": "ordinal", "sort": [], "title": null},
+    "x": {
+      "field": "Pop",
+      "type": "quantitative",
+      "title": "percentage",
+      "scale": {"domain": [0, 100]}
+    },
+    "tooltip": [{"field": "Pop", "type": "quantitative", "title": "Popularity"}]
+  },
+  "config": {}
+}
