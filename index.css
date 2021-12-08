@@ -3,56 +3,16 @@
 
 body{
 
-    background-color: #a19086 ;
+    background-color: lightblue ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 100%;
     margin: auto;
 }
 
-h1{
 
-    color: rgb(238, 211, 211);
-    font-family: 'Lato', sans-serif;
-}
 
-h2{
 
-    color: rgb(255, 255, 255);
-    font-family: 'Lato', sans-serif;
-}
 
-h3{
-    color: #ccc5b8;
-    font-family: 'Lato', sans-serif;
-}
-
-p{font-family: 'Lato', sans-serif;
-color: rgb(255, 255, 255);
-}
-
-.bcontainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;;
-  gap: 30px 30px;
-  margin-top: 30px;
-  border-style: solid;
-  border-color: rgb(129, 116, 116);
-  padding: 30px;
-  border-radius: 25px;
-}
-
-.chart {
-  background-color: white;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
-  border-radius: 30px;
-  text-align: center;
-  padding: 20px;
-  width: 280px;
-  min-width: 500px;
-  
-}
 
 
 	
