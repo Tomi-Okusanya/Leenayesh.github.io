@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.factmaven.com/xml-to-json/?xml=http%3A%2F%2Fapi.worldbank.org%2Fv2%2Fcountry%2Fdeu%2Findicator%2FNY.GNP.PCAP.CD",
+    "format": {"property": "data.data"}
+  },
+  "title": {
+    "text": "GNI Per Capita Growth - Germany",
+    "subtitle": " Atlas Method (Current US$) Source: World Bank",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "seagreen", "strokeWidth": 2, "opacity": 1},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null},
+    "y": {"field": "value", "type": "quantitative", "title": null}
+  },
+  "config": {}
+}
