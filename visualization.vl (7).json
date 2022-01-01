@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "A reflection of productivity?",
+    "subtitle": "Average hours worked per person employed- United Kingdom. Souce: OECD ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "data": {
+    "name": "myData",
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/PDB_LV_01012022005941152.csv",
+    "format": {"type": "csv", "property": "years"}
+  },
+  "mark": {"type": "line", "color": "#00BFFF", "strokeWidth": 2, "opacity": 1},
+  "params": [
+    {
+      "name": "minYear",
+      "value": 1970,
+      "bind": {
+        "input": "range",
+        "min": 1970,
+        "max": 2020,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 1970,
+        "max": 2020,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.TIME>minYear"},
+    {"filter": "datum.TIME<maxYear"}
+  ],
+  "encoding": {
+    "x": {"field": "Time", "type": "temporal", "title": null},
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": {"data": "myData", "field": "Value"}}
+    }
+  },
+  "config": {}
+}
