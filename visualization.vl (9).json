@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Move towards urbanisation",
+    "subtitle": [
+      "Rural population as % of total population Source: World Bank"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/DataScience-APITOPYTHONEXERCISE.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "fold": ["Jordan", "Bahrain", "Kuwait", "Iraq"],
+      "as": ["country.value", "value"]
+    }
+  ],
+  "height": 120,
+  "width": 120,
+  "mark": {"type": "line", "strokeWidth": 2},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {"field": "value", "type": "quantitative", "title": null},
+    "facet": {"field": "country.value", "columns": 2, "title": null}
+  },
+  "resolve": {"scale": {"y": "independent"}},
+  "config": {}
+}
