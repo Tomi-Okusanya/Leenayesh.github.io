@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Anxiety during Covid-19 in the United Kingdom",
+    "subtitle": "GAD-7 Score, > 5 = mild , > 10 = moderate. Source:UKGov",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/SCIENCESarahSmithWomensMentalHealth.csv",
+    "format": {"type": "csv"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "point": false},
+  "encoding": {
+    "x": {
+      "field": "Time period label",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "scale": {"scheme": "inferno"},
+      "title": null,
+      "legend": {"orient": "top-left"}
+    }
+  },
+  "config": {}
+}
