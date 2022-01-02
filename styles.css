@@ -1,6 +1,6 @@
 body{
 
-    background-color: #000000;
+    background-color: #F0FFFF;
     margin: 3%;
 }
 
@@ -22,8 +22,8 @@ h3{
 
 hr {
   border:none;
-  border-top:6px dotted #FFF01F; 
-  color:#FFF01F;
+  border-top:6px dotted #8A2BE2; 
+  color:#8A2BE2;
   background-color: transparent;
   height:3px;
   width:100%;
@@ -33,7 +33,7 @@ hr {
 p{
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
+    color: #6495ED;
     text-align: center;
     line-hight: 1.2;
 }
