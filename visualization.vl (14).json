@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Urbanisation growth: Putting it into perspective",
+    "subtitle": [
+      "Urban population (% of total population). Source: World Bank",
+      ""
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/ProjectChart2.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "Sub-Saharan Africa",
+        "Middle East and North Africa ",
+        "South Asia ",
+        "European Union"
+      ],
+      "as": ["country", "value"]
+    }
+  ],
+  "height": 120,
+  "width": 120,
+  "mark": {"type": "line", "strokeWidth": 2},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+    "y": {"field": "value", "type": "quantitative", "title": null},
+    "facet": {"field": "country", "columns": 2, "title": null}
+  },
+  "resolve": {"scale": {"y": "independent"}},
+  "config": {}
+}
