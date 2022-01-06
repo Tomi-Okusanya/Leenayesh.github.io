@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The relationship between urban population growth rate and ",
+  "title": {
+    "text": "Urbanisation and Female Pupils in Secondary Education",
+    "subtitle": [
+      "Urban population growth rate (x),female pupils as percentage of total pupils (y)",
+      "Source: World Bank"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Leenayesh/Leenayesh.github.io/main/Projectchart3Copy.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {
+    "type": "circle",
+    "size": 150,
+    "color": "rgb(0,67,167)",
+    "opacity": 0.6
+  },
+  "height": 300,
+  "width": 300,
+  "encoding": {
+    "x": {
+      "field": "urban population growth rate",
+      "type": "quantitative",
+      "scale": {"domain": [0, 8]},
+      "title": null
+    },
+    "y": {
+      "field": "educational attainment",
+      "type": "quantitative",
+      "scale": {"domain": [30, 60]},
+      "title": null
+    },
+    "tooltip": [
+      {"field": "date", "title": "Year", "type": "ordinal"},
+      {"field": "country", "title": "Country", "type": "ordinal"}
+    ]
+  },
+  "config": {}
+}
