@@ -64,12 +64,21 @@
  
   <hr size="5" color="#AC35F0" width="400" alligh="center">
     
-<p class=sub><b><span style="color:rgb(255, 105, 180)"></span>Subsaharan Africa<span style="color:rgb(25, 25, 112)"> Let's talk about urbanisation in the fastest urbanising region in the world</span></b></p>
+<p class=sub><b><span style="color:rgb(255, 105, 180)"></span>Subsaharan Africa<span style="color:rgb(64, 224, 208)"> Let's talk about urbanisation in the fastest urbanising region in the world</span></b></p>
 
-<!--Vega embed, with notes for what is going on -->
+<!--This chart is built using the World Bank API that I built by converting it from XML format to JSON format. It is also interactive and has a tooltip -->
   <div class="chart" id="firstChart">
       <script>
         var myChart1 = "Projectchart1.json";
+        vegaEmbed('#firstChart', myChart1);
+      </script>
+  </div>
+      
+
+<!--Vega embed, with notes for what is going on -->
+  <div class="chart" id="secondChart">
+      <script>
+        var myChart2 = "ProjectChart2.json";
         vegaEmbed('#firstChart', myChart1);
       </script>
   </div>
